@@ -5,3 +5,11 @@ example.my_page:
     _title: "My first page in Drupal 8"
   requirements:
     _permission: 'access content'
+
+example.form:
+  path: '/custom-form'
+  defaults:
+    _form: '\Drupal\example\Form\CustomFormController'
+    _title: 'Custom form'
+  requirements:
+    _permission: 'access content'
