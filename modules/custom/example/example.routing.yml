@@ -1,4 +1,4 @@
-example.my_page:
+example.mypage:
   path: '/mypage'
   defaults:
     _controller: '\Drupal\example\Controller\ExampleController::mypage'
@@ -6,7 +6,7 @@ example.my_page:
   requirements:
     _permission: 'access content'
 
-example.form:
+example.custom-form:
   path: '/custom-form'
   defaults:
     _form: '\Drupal\example\Form\CustomFormController'
