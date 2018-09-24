@@ -15,14 +15,25 @@ class CustomFormController extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
+
+   // $uid = \Drupal::currentUser()->id();
+//    $user = \Drupal\user\Entity\User::load($uid);
+//$account = \Drupal\user\Entity\User::load('uid'); // pass your uid
+  //   $name = $account->getUsername();
+//print"DEEP<pre>";
+//print_r($user);
+
+
     $form['candidate_name'] = array(
       '#type' => 'textfield',
       '#title' => t('Candidate Name:'),
+      '#value' => 'DEEP',
       '#required' => TRUE,
     );
     $form['candidate_mail'] = array(
       '#type' => 'email',
       '#title' => t('Email ID:'),
+      '#value' => 'DEEP@gmail.com',
       '#required' => TRUE,
     );
     $form['candidate_number'] = array (
