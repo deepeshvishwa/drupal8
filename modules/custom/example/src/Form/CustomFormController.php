@@ -15,25 +15,26 @@ class CustomFormController extends FormBase {
   }
 
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $account = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
 
-   // $uid = \Drupal::currentUser()->id();
-//    $user = \Drupal\user\Entity\User::load($uid);
-//$account = \Drupal\user\Entity\User::load('uid'); // pass your uid
-  //   $name = $account->getUsername();
-//print"DEEP<pre>";
-//print_r($user);
-
+    $mail = $account->mail->value;
+    $fullname = $account->field_fullname->value;
+    $gender = $account->field_gender->value;
+    $above18 = $account->field_are_you_above_18_years_old->value;
+    $dob = $account->field_date_of_birth->value;
+    $mobile = $account->field_mobile_number->value;
+    $sendacopy = $account->field_send_me_a_copy_of_the_appl->value;
 
     $form['candidate_name'] = array(
       '#type' => 'textfield',
       '#title' => t('Candidate Name:'),
-      '#value' => 'DEEP',
+      '#value' => $fullname,
       '#required' => TRUE,
     );
     $form['candidate_mail'] = array(
       '#type' => 'email',
       '#title' => t('Email ID:'),
-      '#value' => 'DEEP@gmail.com',
+      '#value' => $mail,
       '#required' => TRUE,
     );
     $form['candidate_number'] = array (
@@ -48,6 +49,7 @@ class CustomFormController extends FormBase {
     $form['candidate_gender'] = array (
       '#type' => 'select',
       '#title' => ('Gender'),
+      '#default_value' => 1,
       '#options' => array(
         'Female' => t('Female'),
         'male' => t('Male'),
@@ -56,6 +58,7 @@ class CustomFormController extends FormBase {
     $form['candidate_confirmation'] = array (
       '#type' => 'radios',
       '#title' => ('Are you above 18 years old?'),
+      '#default_value' => t($above18),
       '#options' => array(
         'Yes' =>t('Yes'),
         'No' =>t('No')
