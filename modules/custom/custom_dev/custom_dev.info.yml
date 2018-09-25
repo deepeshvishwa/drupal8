@@ -1,0 +1,6 @@
+name: Drupal 8 Custom Development Tut
+description: This is custom module for purpose - learn many things
+package: Custom Module
+type: module
+version: 8.x
+core: 8.x

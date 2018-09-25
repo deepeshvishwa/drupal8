@@ -1,0 +1,33 @@
+custom_dev.content:
+  path: '/hello'
+  defaults:
+    _controller: '\Drupal\custom_dev\Controller\HelloController::content'
+    _title: 'Hello Drupal'
+  requirements:
+    _permission: 'access content'
+
+
+custom_dev.offers_controller_hello:
+  path: '/offers/hot/{count}'
+  defaults:
+    _controller: '\Drupal\custom_dev\Controller\OffersController::offers_controller'
+    _title: 'Offers'
+  requirements:
+    _permission: 'access content'
+
+
+custom_dev.insert_new_node:
+  path: '/addnode'
+  defaults:
+    _controller: '\Drupal\custom_dev\Controller\InsertNewNodeController::insert_new_node'
+    _title: 'Adding new node'
+  requirements:
+    _permission: 'access content'
+
+custom_dev.delete_node:
+  path: '/delnode'
+  defaults:
+    _controller: '\Drupal\custom_dev\Controller\DeleteNodeController::delete_node'
+    _title: 'Delete Existing node'
+  requirements:
+    _permission: 'access content'
