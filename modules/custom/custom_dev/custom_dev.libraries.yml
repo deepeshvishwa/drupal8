@@ -1,0 +1,6 @@
+custom_dev-js:
+  version: 1.x
+  js:
+    js/custom_dev.js: {}
+  dependencies:
+    - core/jquery

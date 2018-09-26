@@ -1,0 +1,42 @@
+<?php
+/**
+* Implements hook_preprocess_page()
+* $variables contains all variables used for the template.
+* $hook should be ‘page’ in this case.
+**/
+function custom_dev_preprocess_page(&$variables, $hook) {
+  // Rendering a table inside the template
+  // Using a render array is the best practice here - Twigg will render it correctly.
+  $variables['table'] = array(
+    '#theme' => 'table',
+    '#header' => 'sdfsdf',
+    '#rows' => 'sdsdsdf',
+  );
+  //Add a JS library
+  $variables['#attached']['library'][] = 'custom_dev/custom_dev-js';
+}
+
+/**
+* Implements hook_theme_suggestions_page_alter()
+* $variables contains all variables used for the template.
+* $suggestions will contain the current suggestions for the hook
+* ‘page’ in this case.
+**/
+
+function custom_dev_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add a new suggestion for a page template
+  // This allows us to use a template name page--lotus.tpl.php
+  $suggestions[] =  'page__custom_dev';
+}
+
+
+/**
+* Implements hook_theme() to add the template definition.
+**/
+function custom_dev_theme($existing, $type, $theme, $path) {
+  return array(
+    'custom_dev_template' => array(
+      'variables' => array('test_var' => NULL),
+    ),
+  );
+}
