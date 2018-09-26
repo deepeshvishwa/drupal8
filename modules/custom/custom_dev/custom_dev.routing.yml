@@ -31,3 +31,12 @@ custom_dev.delete_node:
     _title: 'Delete Existing node'
   requirements:
     _permission: 'access content'
+
+
+custom_dev.:
+  path: '/update_user'
+  defaults:
+    _controller: '\Drupal\custom_dev\Controller\UpdateUserController::update_user_info'
+    _title: 'Update User Details'
+  requirements:
+    _permission: 'access content'
