@@ -1,0 +1,6 @@
+name: Drupal Up Controller
+description: This is custom module Drupal Up Controller, use of Twig
+package: Custom Module
+type: module
+version: 8.x
+core: 8.x

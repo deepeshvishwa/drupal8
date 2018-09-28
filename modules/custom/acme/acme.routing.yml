@@ -1,0 +1,7 @@
+acme_hello.hello:
+  path: '/acme/hello/{name}'
+  defaults:
+    _content: '\Drupal\acme\Controller\DefaultController::hello'
+    _title: 'acme Title'
+  requirements:
+    _permission: 'access content'

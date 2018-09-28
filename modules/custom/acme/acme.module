@@ -1,0 +1,9 @@
+<?php
+  function acme_theme() {
+    $theme['hello_page'] = [
+      'variables' => ['name' => NULL],
+      'template' => 'hello'
+    ];
+
+    return $theme;
+  }

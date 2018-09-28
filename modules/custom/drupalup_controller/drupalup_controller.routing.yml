@@ -1,0 +1,6 @@
+drupalup_controller.article_list:
+  path: '/drupalup/articles'
+  defaults:
+    _controller: '\Drupal\drupalup_controller\Controller\ArticleController::page'
+  requirements:
+    _permission: 'access content'
