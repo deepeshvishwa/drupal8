@@ -1,0 +1,9 @@
+<?php
+function user_step1_theme($existing, $type, $theme, $path) {
+  return array('user_step1_form' => array('render element' => 'form'));
+}
+function user_step1_preprocess_userstep1form(&$vars) {
+  // echo "string is comingc";echo "<pre>"; print_r($vars);exit();
+
+  $vars['UserStep1Form'] = \Drupal::formBuilder()->getForm('\Drupal\my_module\Form\UserStep1Form');
+}

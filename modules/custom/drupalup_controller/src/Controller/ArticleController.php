@@ -1,5 +1,4 @@
 <?php
-
 namespace Drupal\drupalup_controller\Controller;
 
 class ArticleController {
@@ -13,10 +12,12 @@ class ArticleController {
       array('name' => 'Article four'),
     );
 
-    return array(
+    $data = array(
       '#theme' => 'article_list',
+      '#title' => 'Our Article List',
       '#items' => $items,
-      '#title' => 'Our article list'
     );
+
+    return $data;
   }
 }
