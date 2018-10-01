@@ -4,3 +4,12 @@ drupalup_controller.article_list:
     _controller: '\Drupal\drupalup_controller\Controller\ArticleController::page'
   requirements:
     _permission: 'access content'
+
+
+
+drupalup_controller.contact_us:
+  path: '/drupalup/contactus'
+  defaults:
+    _form: '\Drupal\drupalup_controller\Form\ContactUsForm'
+  requirements:
+    _permission: 'access content'

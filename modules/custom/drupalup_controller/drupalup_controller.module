@@ -5,11 +5,18 @@
 function drupalup_controller_theme($existing, $type, $theme, $path){
 
   $item_list = array(
+
     'article_list' => array(
       'variables' => array(
         'items' => array()
       ),
     ),
+
+    'contact_us_form' => array(
+      'render element' => 'form',
+      'template' => 'contact-us',
+    ),
+
   );
 
   return $item_list;
