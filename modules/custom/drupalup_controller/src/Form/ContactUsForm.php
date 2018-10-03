@@ -73,14 +73,6 @@ class ContactUsForm extends FormBase {
       '#button_type' => 'primary',
     );
 
-    //return $form;
-/*
-    $data1 = array(
-      '#theme' => 'contact-us',
-      '#title' => 'Contact Us Form',
-      '#items' => $form,
-    );
-*/
     return $form;
   }
 

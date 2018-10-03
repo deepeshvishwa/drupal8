@@ -1,9 +1,15 @@
 <?php
-function user_step1_theme($existing, $type, $theme, $path) {
-  return array('user_step1_form' => array('render element' => 'form'));
-}
-function user_step1_preprocess_userstep1form(&$vars) {
-  // echo "string is comingc";echo "<pre>"; print_r($vars);exit();
+/**
+* Implementing hook_theme().
+*/
+function user_step1_theme($existing, $type, $theme, $path){
 
-  $vars['UserStep1Form'] = \Drupal::formBuilder()->getForm('\Drupal\my_module\Form\UserStep1Form');
+  $item_list = array(
+    'user_step1_form' => array(
+      'render element' => 'form',
+      'template' => 'user-step1-form',
+    ),
+  );
+
+  return $item_list;
 }

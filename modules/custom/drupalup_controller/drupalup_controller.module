@@ -16,7 +16,6 @@ function drupalup_controller_theme($existing, $type, $theme, $path){
       'render element' => 'form',
       'template' => 'contact-us',
     ),
-
   );
 
   return $item_list;

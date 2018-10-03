@@ -1,7 +1,6 @@
 user_step1.user_step1_page:
   path: '/user-step1'
   defaults:
-    _title: 'Form API Examples'
-    _form: '\Drupal\user_step1\Controller\UserStep1PageController'
+    _form: '\Drupal\user_step1\Form\UserStep1Form'
   requirements:
     _permission: 'access content'
