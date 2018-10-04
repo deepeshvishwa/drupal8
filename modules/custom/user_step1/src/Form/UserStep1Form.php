@@ -15,21 +15,27 @@ class UserStep1Form extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
-//$user = \Drupal::currentUser();
 $user_load = User::load(\Drupal::currentUser()->id());
 
-$email = $user_load->get('mail')->value;
-$name = $user_load->get('name')->value;
+//$email = $user_load->get('mail')->value;
+//$name = $user_load->get('name')->value;
 $full_name = $user_load->get('field_fullname')->value;
-$mobile = $user_load->get('field_mobile_number')->value;
+//$mobile = $user_load->get('field_mobile_number')->value;
 
-print 'Email-'.$email.',<br/> Name-'.$name.',<br/> Full Name-'.$full_name.',<br/> Mobile No-'.$mobile;
+$picture = ['#theme' => 'image_style', '#style_name' => 'image_64x64', '#uri' => $user_load->get('user_picture')->entity->url(),];
+$picture = $picture['#uri'];
 
-exit;
+//print"DEEP----<pre>";
+//print_r($picture);
 
-    $form['user_full_name'] = array(
+    $form['user_fullname'] = array(
       '#type' => 'markup',
-      '#markup' => 'Vishwkarma',
+      '#markup' => $full_name,
+    );
+
+    $form['user_picture'] = array(
+      '#type' => 'markup',
+      '#markup' => $picture,
     );
 
     $form['professional_category'] = array (

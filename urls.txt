@@ -1,3 +1,5 @@
 https://buildamodule.com/collection/drupal-8-developer-prep
 http://redcrackle.com/blog/say-hello-world-drupal-8-basic-steps-involved-creating-custom-module-drupal-8
 https://suyati.com/blog/step-step-guide-create-custom-modules-drupal-8/
+https://www.ithands.com/blog/drupal-7-vs-drupal-8-technical-perspective/
+https://medium.com/@mindfiresolutions.usa/drupal-8-vs-drupal-7-22d95b6e7fed
