@@ -1,0 +1,27 @@
+<?php
+/**
+ * Implements hook_menu().
+ */
+function loggedin_users_list_menu() {
+  $items = array();
+  $items['admin/config/people/loggedin_users_list'] = array(
+    'title' => 'Loggedin users list',
+    'description' => 'List of loggedin user at this time.',
+    'access arguments' => array('administer'),
+    'page callback' => 'loggedin_users_list_page',
+    'file' => 'loggedin_users_list.admin.inc',
+  );
+
+  return $items;
+}
+
+
+function loggedin_users_list_theme() {
+  $themes = array (
+    'loggedin_users_list' => array (
+      'variables' => array('users_no' => NULL, 'userdata' => NULL,),
+      'template' => 'loggedin-users-list',
+  ),
+);
+return $themes;
+}
