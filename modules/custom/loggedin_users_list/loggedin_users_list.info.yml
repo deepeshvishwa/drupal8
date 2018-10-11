@@ -1,0 +1,5 @@
+name: 'Loggedin Users List'
+type: module
+description: 'Showing the list of loggedin users who have currently loggedin.'
+core: 8.x
+package: 'Custom'
