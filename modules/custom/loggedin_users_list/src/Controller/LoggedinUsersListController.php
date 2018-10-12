@@ -133,7 +133,7 @@ class LoggedinUsersListController extends ControllerBase {
     $query_delete->execute();
     drupal_set_message(t('User log out successfully.'));
     $response = new RedirectResponse('/admin/config/people/loggedin-users-list');
-    $response->send();
+    return $response->send();
   }
 
 }

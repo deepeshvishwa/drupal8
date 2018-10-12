@@ -3,7 +3,7 @@ loggedin_users_list.loggedin_users_list_controller_loggedin_users:
   path: 'admin/config/people/loggedin-users-list'
   defaults:
     _controller: '\Drupal\loggedin_users_list\Controller\LoggedinUsersListController::loggedin_users'
-    _title: 'Show Logged-in Users List'
+    _title: 'Logged-in Users List'
   requirements:
     _permission: 'administer account settings'
 
