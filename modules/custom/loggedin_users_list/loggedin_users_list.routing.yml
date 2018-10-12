@@ -6,10 +6,11 @@ loggedin_users_list.loggedin_users_list_controller_loggedin_users:
     _title: 'Show Logged-in Users List'
   requirements:
     _permission: 'administer account settings'
-#loggedin_users_list.loggedin_users_list_controller_logout_user:
-#  path: 'admin/config/people/loggedin-users-list/logout/%'
-#  defaults:
-#    _controller: '\Drupal\loggedin_users_list\Controller\LoggedinUsersListController::logout_user'
-#    _title: 'Logout User'
-#  requirements:
-#    _permission: 'administer account settings'
+
+loggedin_users_list.loggedin_users_list_controller_logout_user:
+  path: 'admin/config/people/loggedin-users-list/{logout}'
+  defaults:
+    _controller: '\Drupal\loggedin_users_list\Controller\LoggedinUsersListController::logout_user'
+    _title: 'Logout User'
+  requirements:
+    _permission: 'administer account settings'
