@@ -16,10 +16,25 @@ class LoggedinUsersListController extends ControllerBase {
     $query_count->addExpression('COUNT(DISTINCT(uid))');
     $count_rc = $query_count->execute()->fetchField();
 
-    // Display List of currently loggedin users.
+    /* Display List of currently loggedin users.
     // Use this link (https://www.drupal.org/project/drupal/issues/2939760) to remove ",ONLY_FULL_GROUP_BY" word
     // from location "\core\lib\Drupal\Core\Database\Driver\mysql\Connection.php" at line no. 455
-    // OR it can be setting into settings.php
+    // OR it can be setting into settings.php and add below code
+
+	$databases['default']['default'] = array (
+	  'database' => 'database',
+	  'username' => 'root',
+	  'password' => '****',
+	  'prefix' => '',
+	  'host' => 'localhost',
+	  'port' => '3306',
+	  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+	  'driver' => 'mysql',
+	  'init_commands' => [
+	    'sql_mode' => "SET sql_mode = 'ANSI,STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER'",
+	  ],
+	);
+	*/
     $query_list = \Drupal::database()->select('sessions', 's');
     $query_list->leftJoin('users_field_data', 'u', 'u.uid = s.uid');
     $query_list->addExpression('COUNT(s.uid)','count_uid');
@@ -118,7 +133,7 @@ class LoggedinUsersListController extends ControllerBase {
     $build = ['#markup' => '',];
 
     $build['table'] = [
-      '#prefix'=> '<div><b>Currently number of logged-in users: '.$count_rc.'</b></div>',
+      '#prefix'=> '<table><tr><td><b>Currently number of logged-in users: </b></td><td><b>'.$count_rc.'</b></td></tr></table>',
       '#theme' => 'table',
       '#header' => $header,
       '#rows' => $rows_data,

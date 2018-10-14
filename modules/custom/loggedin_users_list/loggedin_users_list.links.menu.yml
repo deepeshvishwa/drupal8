@@ -2,5 +2,5 @@ loggedin_users_list.loggedin_users_list_controller_loggedin_users:
   title: 'Logged-in Users List'
   route_name: loggedin_users_list.loggedin_users_list_controller_loggedin_users
   description: 'Logged-in Users List1'
-  parent: system.admin_config_system
+  parent: user.admin_index
   weight: 10
