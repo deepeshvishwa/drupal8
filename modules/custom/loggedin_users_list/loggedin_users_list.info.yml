@@ -1,5 +1,5 @@
-name: 'Loggedin Users List'
+name: 'Logged-in Users List'
 type: module
-description: 'Showing the list of loggedin users who have currently loggedin.'
+description: 'Showing the list of logged-in users who have currently loggedin.'
 core: 8.x
 package: 'Custom'

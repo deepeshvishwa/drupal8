@@ -16,7 +16,7 @@ class LoggedinUsersListController extends ControllerBase {
     $query_count->addExpression('COUNT(DISTINCT(uid))');
     $count_rc = $query_count->execute()->fetchField();
 
-    /* Display List of currently loggedin users.
+    /* Display List of currently logged-in users.
     // Use this link (https://www.drupal.org/project/drupal/issues/2939760) to remove ",ONLY_FULL_GROUP_BY" word
     // from location "\core\lib\Drupal\Core\Database\Driver\mysql\Connection.php" at line no. 455
     // OR it can be setting into settings.php and add below code
