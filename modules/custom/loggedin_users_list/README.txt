@@ -2,8 +2,8 @@
 -- SUMMARY --
 
 This module displaying how many numbers of users currently logged-in on the
-website. Administrater can see the details of how many users are
-logged-in on diffrerent system or browsers with the details of logged-in
+website. Administrator can see the details of how many users are
+logged-in on different system or browsers with the details of logged-in
 time and hostname/IP address.
 
 Administrator has rights to logout any user from his machine/browser anytime.
