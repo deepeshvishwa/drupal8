@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'nxcGWIoZ4LB3EhS0H6oUBWm7xp6FjXh1kQZMJiEKyXNVeBJknK4XwH8YkP27OCdyJZRADmd7OQ';
 
 /**
  * Deployment identifier.
@@ -776,3 +776,14 @@ if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['D
   require $_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR'] . '/loc_drupal8mywork_dd.inc';
 }
 // </DDSETTINGS>
+$databases['default']['default'] = array (
+  'database' => 'drupal8_rnd',
+  'username' => 'root',
+  'password' => '',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '33067',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$config_directories['sync'] = 'sites/drupal8-rnd.dd/files/config_HMbvvQeJg8IPQefUFY-DdryfdLWVtr6vUCeRN_tPST30ZXxR_xnx5YJKk6zk8vienluJlTYtDg/sync';
