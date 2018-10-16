@@ -19,15 +19,15 @@ $user_load = User::load(\Drupal::currentUser()->id());
 
 //$email = $user_load->get('mail')->value;
 //$name = $user_load->get('name')->value;
-$full_name = $user_load->get('field_fullname')->value;
+//$full_name = $user_load->get('field_fullname')->value;
 //$mobile = $user_load->get('field_mobile_number')->value;
 
-$picture = ['#theme' => 'image_style', '#style_name' => 'image_64x64', '#uri' => $user_load->get('user_picture')->entity->url(),];
-$picture = $picture['#uri'];
+//$picture = ['#theme' => 'image_style', '#style_name' => 'image_64x64', '#uri' => $user_load->get('user_picture')->entity->url(),];
+//$picture = $picture['#uri'];
 
 //print"DEEP----<pre>";
 //print_r($picture);
-
+/*
     $form['user_fullname'] = array(
       '#type' => 'markup',
       '#markup' => $full_name,
@@ -37,7 +37,7 @@ $picture = $picture['#uri'];
       '#type' => 'markup',
       '#markup' => $picture,
     );
-
+*/
     $form['professional_category'] = array (
       '#type' => 'select',
       '#title' => ('Professional'),
