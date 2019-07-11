@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build:js": "cross-env BABEL_ENV=legacy node ./scripts/js/babel-es6-build.js",
-    "build:js-dev": "cross-env NODE_ENV=development node BABEL_ENV=legacy ./scripts/js/babel-es6-build.js",
+    "build:js-dev": "cross-env NODE_ENV=development BABEL_ENV=legacy node ./scripts/js/babel-es6-build.js",
     "watch:js": "cross-env BABEL_ENV=legacy node ./scripts/js/babel-es6-watch.js",
     "watch:js-dev": "cross-env NODE_ENV=development BABEL_ENV=legacy node ./scripts/js/babel-es6-watch.js",
     "lint:core-js": "node ./node_modules/eslint/bin/eslint.js .",
@@ -41,7 +41,7 @@
     "mkdirp": "^0.5.1",
     "nightwatch": "^0.9.20",
     "prettier": "^1.14.0",
-    "stylelint": "^9.1.1",
+    "stylelint": "^9.10.1",
     "stylelint-checkstyle-formatter": "^0.1.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-no-browser-hacks": "^1.1.0"
